@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>DeepSearch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="js/popup.js"></script>
 </head>
 <body>
-    <p>
-        Pasta
-    </p>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Enter you research here...">
+
+        <label for="raw-search">Raw Search:</label>
+        <input type="checkbox" id="raw-search" name="">
+        <input type="text" id="extension" placeholder=".ext">
+    </div>
+    <div class="source-specification">
+        <label for="website">Website</label>
+        <input type="text" id="website" placeholder="www.exemple.com">
+    </div>
+    <div class="date-specification">
+        <span>Dates: </span>
+        <label for="date-beginning">Début:</label>
+        <input type="date" id="date-beginning">
+
+        <label for="date-ending">Fin:</label>
+        <input type="date" id="date-ending">
+
+        <input type="submit" value="Research">
+    </div>
 </body>
 </html>
