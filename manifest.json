@@ -3,7 +3,7 @@
   "description": "Makes specific searches on Google easier.",
   "version": "1.0.0",
   "manifest_version": 3,
-  "permissions": ["scripting"],
+  "permissions": ["scripting","tabs"],
   "action": {
     "default_popup": "interface/popup.html",
     "default_icon": {

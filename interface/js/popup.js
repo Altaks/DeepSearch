@@ -9,5 +9,12 @@ const dateEndInput = document.getElementById("date-ending");
 const submitButton = document.getElementById("submitButton");
 
 submitButton.addEventListener("click", function(event) {
-    
+
+    var link = "";
+
+    // add calculations here
+
+
+    window.open(link);
+
 });
