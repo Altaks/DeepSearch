@@ -1,0 +1,9 @@
+{
+  "name": "DeepSearch",
+  "description": "Makes specific searches on Google easier.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "interface/popup.html"
+  }
+}
