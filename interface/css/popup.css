@@ -1,3 +1,15 @@
+:root {
+    --background-color: #F3F9D2;
+    --input-color: #CBEAA6;
+    --input-border-color: #C0D684;
+    --text-color: #63264A;
+}
+
+::placeholder, ::-ms-input-placeholder, :-ms-input-placeholder {
+    color: #3D0B37;
+    opacity: 1;
+}
+
 * {
     font-family: 'Open Sans', sans-serif;
 }
@@ -5,6 +17,7 @@
 html {
     box-shadow: 0 0 10px #000;
     padding: 5px;
+    background-color: var(--background-color);
 }
 
 input[type="text"] {
@@ -29,5 +42,26 @@ input[type="checkbox"] {
 }
 
 input[type="submit"] {
-    height: 25px;
+    padding: 5px;
+    color: var(--text-color);
+    background-color: aliceblue;
+}
+
+input {
+    padding: 5px;
+    border: 2px solid var(--input-border-color);
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+label {
+    color: var(--text-color);
+}
+
+input:focus, textarea:focus {
+    color: var(--text-color);
+}
+
+hr {
+    margin: 10px 0 10px 0;
 }

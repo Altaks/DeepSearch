@@ -1,3 +1,5 @@
+// NORMAL SEARCH PART
+
 const searchInput = document.getElementById("search");
 const rawSearchInput = document.getElementById("raw-search");
 const extensionInput = document.getElementById("extension");
@@ -21,7 +23,7 @@ submitButton.onclick = function(event) {
         if(rawSearchInput.checked) {
             link += "\""
         }
-    }
+    } else return;
 
     if(extensionInput.value != "") {
         link += "+ext:" + extensionInput.value;
@@ -40,9 +42,31 @@ submitButton.onclick = function(event) {
         var dateBegin = new Date(dateBeginInput.value);
         var dateEnd = new Date(dateEndInput.value);
 
-        link += "+" + dateBegin.getJulian() + ".." + dateEnd.getJulian();
+        link += "+daterange:" + dateBegin.getJulian() + ".." + dateEnd.getJulian();
     }
 
     window.open(link, '_blank');
 
 }
+
+// MOVIE SEARCH PART
+const movieNameInput = document.getElementById("movie-name");
+const languageInput = document.getElementById("language");
+const submitMovieButton = document.getElementById("submit-movie");
+
+submitMovieButton.addEventListener("click", function(event) {
+
+    var link = "https://www.google.com/search?q=intitle:of? ";
+
+    if(movieNameInput.value != "") {
+        link += "\"" + movieNameInput.value + "\"";
+    } else return;
+
+    if(languageInput.value != "") {
+        link += "+" + languageInput.value;
+    }
+
+    link += "+mkv"
+
+    window.open(link, '_blank');
+});
