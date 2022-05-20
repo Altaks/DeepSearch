@@ -2,6 +2,7 @@
 
 const searchInput = document.getElementById("search");
 const rawSearchInput = document.getElementById("raw-search");
+const deepSearchInput = document.getElementById("deep-links");
 const extensionInput = document.getElementById("extension");
 const websiteInput = document.getElementById("website");
 
@@ -13,6 +14,10 @@ const submitButton = document.getElementById("submit");
 submitButton.onclick = function(event) {
 
     var link = "https://www.google.com/search?q=";
+
+    if(deepSearchInput.checked) {
+        link += "intitle:of? ";
+    }
 
     // add calculations here
     if(searchInput.value != "") {
@@ -26,7 +31,7 @@ submitButton.onclick = function(event) {
     } else return;
 
     if(extensionInput.value != "") {
-        link += "+ext:" + extensionInput.value;
+        link += "+ext:" + extensionInput.value.replace(".", "");
     }
 
     if(websiteInput.value != "") {

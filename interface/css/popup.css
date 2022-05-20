@@ -24,6 +24,10 @@ input[type="text"] {
     min-width: 100px;
 }
 
+#extension {
+    max-width: 15px !important;
+}
+
 body > div {
     display: flex;
     flex-direction: row;
